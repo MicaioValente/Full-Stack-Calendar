@@ -1,33 +1,57 @@
-import React from 'react'
-import moment from 'moment'
-import './styles.css'
+import React, {useState, useEffect} from 'react'
+import './componentsStyles.js'
+import {
+    Calendar, 
+    Day, 
+    Body, 
+    DayNames, 
+    Week} from './componentsStyles'
+import buildCalendar from './build'
+import dayStyles, {beforeToday} from './styles'
+import Header from './header'
 
 
 
-export default function CalendarComponent(){
-    const value = moment();
-    const startDay = value.clone().startOf("month").startOf("week");
-    const endDay = value.clone().endOf("month").endOf("week");
-    const day = startDay.clone().subtract(1, "day")
-    const calendar = []
+export default function CalendarComponent({value, onChange}){
+    const [calendar, setCalendar] = useState([])
+    useEffect(() => {
+        setCalendar(buildCalendar(value))
+    }, [value])
+    
 
-    while(day.isBefore(endDay, "day")){
-        calendar.push(
-            Array(7)
-            .fill(0)
-            .map(() => day.add(1, "day").clone())
-        )
-    }
+    
+
+
     return(
-       <div className='calendar'>
-           {calendar.map((week)=> (
-               <div>
-                   {week.map((day)=> (
-                       <div className="day">{day.format("D").toString()}</div>
-                   ))}
-               </div>
+       <Calendar>
+        <Header value={value} setValue={onChange}/>
+          <Body>
+              <DayNames>
+                  {
+                      ["S", "M", "T", "W", "T", "F", "S"].map(week =>
+                      <Week>
+                          {week}
+                      </Week>)
+                  }
+              </DayNames>
+            {calendar.map((week)=> (
+                 <div className='line'>
+                     {week.map((day)=> (
+                         <Day
+                          onClick={() => !beforeToday(day) && onChange(day)}>
+                          <div
+                              className={dayStyles(day, value)}
+                          ><a href="/deu-certo">{day.format("D").toString()}</a></div>
+                          </Day>
+                     ))}
+                 </div>
 
-           ))}
-       </div>
+             ))}
+          </Body>
+       </Calendar>
     )
 }
+
+
+
+
