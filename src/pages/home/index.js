@@ -8,8 +8,8 @@ import {Content} from './styles'
 export default function Home() {
   return (
     <Content>
-      <h1>OLÁ</h1>
-    <div><a>Calendar</a></div>
+      <h1>Hello!</h1>
+    <div><a href='/calendar'>Calendar</a></div>
       
     </Content>
   );

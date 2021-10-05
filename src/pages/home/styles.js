@@ -28,4 +28,8 @@ export const Content = styled.div`
       box-shadow: 0 0 20px #916bbf;
       cursor: pointer;
     }
+    a{
+      text-decoration: none;
+      color: #f5f5f5;
+    }
 `
