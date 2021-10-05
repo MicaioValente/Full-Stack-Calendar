@@ -1,10 +1,13 @@
 import React from 'react'
-
+import CalendarComponent from '../../components/calendar'
 
 export default function Calendar(){
+
+
+
+
     return(
-        <>
-        <h1>Calendar</h1>
-        </>
+        <CalendarComponent/>
     )
 }
+
