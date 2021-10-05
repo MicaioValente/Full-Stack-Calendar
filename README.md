@@ -1,6 +1,6 @@
 See my project working
 
-https://full-stack-calendar.vercel.app/
+https://calendar-full-stack.vercel.app/
 
 Install dependencies
 ## npm install
