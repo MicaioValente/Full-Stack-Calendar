@@ -16,8 +16,8 @@ export const Calendar = styled.div`
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
         &:hover{
-            box-shadow: 0 0 1px pink
-            color: white;
+            box-shadow: 0 0 1px pink;
+            
         }
     }
 `
