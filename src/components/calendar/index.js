@@ -41,7 +41,7 @@ export default function CalendarComponent({value, onChange}){
                           onClick={() => !beforeToday(day) && onChange(day)}>
                           <div
                               className={dayStyles(day, value)}
-                          ><a href="/deu-certo">{day.format("D").toString()}</a></div>
+                          ><a href="/">{day.format("D").toString()}</a></div>
                           </Day>
                      ))}
                  </div>
