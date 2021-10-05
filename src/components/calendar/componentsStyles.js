@@ -17,7 +17,7 @@ export const Calendar = styled.div`
         font-weight: 600;
         &:hover{
             box-shadow: 0 0 1px pink;
-            color: white;
+            color: #f5f5f5;
             
         }
     }
