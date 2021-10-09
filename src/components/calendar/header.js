@@ -1,7 +1,7 @@
 import React from "react"
-import {Header, Previous, Current, Next }from './componentsStyles'
+import { Header, Previous, Current, Next } from './componentsStyles'
 
-export default function CalendarHeader({value, setValue}) {
+export default function CalendarHeader({ value, setValue }) {
     function currMonthName() {
         return value.format("MMMM")
     }
@@ -23,18 +23,18 @@ export default function CalendarHeader({value, setValue}) {
     function thisMouth() {
         return value.isSame(new Date(), "month")
     }
-    return(
+    return (
         <Header>
             <Previous
-            onClick={() => !thisMouth() && setValue(prevMonth())}
+                onClick={() => !thisMouth() && setValue(prevMonth())}
             >{!thisMouth() ? String.fromCharCode(171) : ""}</Previous>
             <Current>
                 {currMonthName()} {currYear()}
             </Current>
             <Next
-            onClick={() => setValue(nextMonth())}
+                onClick={() => setValue(nextMonth())}
             >{String.fromCharCode(187)}</Next>
         </Header>
     )
-    
+
 }

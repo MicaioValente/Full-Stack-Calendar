@@ -1,17 +1,17 @@
 import React from 'react'
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import Calendar from './pages/calendar'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import App from './pages/calendar'
 
 
 
 
-export default function Routes(){
-    return(
+export default function Routes() {
+    return (
         <BrowserRouter>
             <Switch>
-                <Route path='/' component={Calendar}/>
+                <Route path='/' component={App} />
             </Switch>
-        
+
         </BrowserRouter>
     )
 }

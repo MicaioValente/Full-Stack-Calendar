@@ -6,9 +6,12 @@ export const Calendar = styled.div`
     height: 100%;
     text-align: center;
     font-size: 30px;
-    cursor: pointer;
+    #input{
+
+    }
+    
     .line{
-        height: 170px;
+        height: 100px;
     }
     a{
         text-decoration: none;
@@ -21,12 +24,19 @@ export const Calendar = styled.div`
             
         }
     }
+    button{
+        
+    }
 `
 export const Day = styled.div`
     width: calc(100% / 7);
     height: 167px;
     display: inline-block;
     cursor: pointer;
+    &:hover{
+        background-color: rgb(148,119,187);
+
+    }
     
     
     .before{
@@ -35,9 +45,12 @@ export const Day = styled.div`
         height: 100%;
         display: inline-block;
         margin: 0;
-
+    &:hover{
+        background-color: rgba(0.3, 0.3, 0.3, 0.5);
+    }
     }
     .selected{
+            display: revert;
         background-color: #916BBF;
         width: 100%;
         height: 100%;
@@ -52,13 +65,14 @@ export const Day = styled.div`
         height: 100%;
         display: inline-block;
     }
+    
 
 `
 export const Body = styled.div`
     height: 100%;
 
 `
-export const DayNames= styled.div`
+export const DayNames = styled.div`
     background-color: transparent;
 
 `
@@ -90,3 +104,73 @@ export const Current = styled.div`
 export const Next = styled.div`
 
 `
+export const Modal = styled.div`
+	z-index: auto;
+	display: ${({ show }) => (show ? 'block' : 'none')};
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width:100vw;
+	background: rgba(0,0,0,0.6);
+`;
+export const InputDiv = styled.div`
+    
+
+`
+export const Model = styled.div`
+	z-index: auto;
+	display: ${({ show }) => (show ? 'flex' : 'none')};
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width:100vw;
+	background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    
+`;
+export const ContentModal = styled.div`
+	width: 270px;
+    height: 350px;
+    border-radius: 36px;
+    background-color: #f5f5f5;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: initial;
+    
+`;
+export const ButtonDiv = styled.div`
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 230px;
+    right: 0px;
+`;
+export const BotonClose = styled.button`
+	background-color: red;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    height: 30px;
+    width: 100px; 
+    cursor: pointer;
+
+`;
+export const BotonSave = styled.button`
+    border: none;
+    border-radius: 30px;
+	background-color: blue;
+    color: white;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+
+`;
+export const DivEvent = styled.div`
+    
+`;
