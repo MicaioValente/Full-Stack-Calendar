@@ -6,11 +6,9 @@ export default function CalendarHeader({ value, setValue }) {
         return value.format("MMMM")
     }
 
-
     function currYear() {
         return value.format("YYYY")
     }
-
 
     function prevMonth() {
         return value.clone().subtract(1, "month")
@@ -23,6 +21,7 @@ export default function CalendarHeader({ value, setValue }) {
     function thisMouth() {
         return value.isSame(new Date(), "month")
     }
+
     return (
         <Header>
             <Previous
@@ -36,5 +35,4 @@ export default function CalendarHeader({ value, setValue }) {
             >{String.fromCharCode(187)}</Next>
         </Header>
     )
-
 }

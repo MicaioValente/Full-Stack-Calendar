@@ -9,7 +9,6 @@ export const Calendar = styled.div`
     #input{
 
     }
-    
     .line{
         height: 100px;
     }
@@ -21,7 +20,6 @@ export const Calendar = styled.div`
         &:hover{
             box-shadow: 0 0 1px pink;
             color: #f5f5f5;
-            
         }
     }
     button{
@@ -33,49 +31,45 @@ export const Day = styled.div`
     height: 167px;
     display: inline-block;
     cursor: pointer;
-    &:hover{
-        background-color: rgb(148,119,187);
-
-    }
-    
-    
-    .before{
-        background-color: rgba(0.3, 0.3, 0.3, 0.1);
-        width: 100%;
-        height: 100%;
-        display: inline-block;
-        margin: 0;
-    &:hover{
-        background-color: rgba(0.3, 0.3, 0.3, 0.5);
-    }
-    }
-    .selected{
+        &:hover{
+            background-color: rgb(148,119,187);
+        }
+        .before{
+            background-color: rgba(0.3, 0.3, 0.3, 0.1);
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            margin: 0;
+                &:hover{
+                    background-color: rgba(0.3, 0.3, 0.3, 0.5);
+                }
+        }
+        .selected{
             display: revert;
-        background-color: #916BBF;
-        width: 100%;
-        height: 100%;
-        display: inline-block;
-        margin: 0;
+            background-color: #916BBF;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            margin: 0;
 
-    }
-    .today{
-        margin: 0;
-        background-color: #3D2C8D;
-        width: 100%;
-        height: 100%;
-        display: inline-block;
-    }
-    
-
+        }
+        .today{
+            margin: 0;
+            background-color: #3D2C8D;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+        }
 `
+
 export const Body = styled.div`
     height: 100%;
-
 `
+
 export const DayNames = styled.div`
     background-color: transparent;
-
 `
+
 export const Week = styled.div`
     margin: 0;
     color: #f5f5f5;
@@ -83,7 +77,6 @@ export const Week = styled.div`
     height: 100px;
     display: inline-block;
 `
-
 
 export const Header = styled.div`
     color: #f5f5f5;
@@ -95,15 +88,19 @@ export const Header = styled.div`
     font-weight: 600;
 
 `
+
 export const Previous = styled.div`
 
 `
+
 export const Current = styled.div`
 
 `
+
 export const Next = styled.div`
 
 `
+
 export const Modal = styled.div`
 	z-index: auto;
 	display: ${({ show }) => (show ? 'block' : 'none')};
@@ -113,11 +110,13 @@ export const Modal = styled.div`
 	height: 100vh;
 	width:100vw;
 	background: rgba(0,0,0,0.6);
-`;
+`
+
 export const InputDiv = styled.div`
     
 
 `
+
 export const Model = styled.div`
 	z-index: auto;
 	display: ${({ show }) => (show ? 'flex' : 'none')};
@@ -130,7 +129,8 @@ export const Model = styled.div`
     justify-content: center;
     align-items: center;
     
-`;
+`
+
 export const ContentModal = styled.div`
 	width: 270px;
     height: 350px;
@@ -143,14 +143,16 @@ export const ContentModal = styled.div`
     align-items: center;
     justify-content: initial;
     
-`;
+`
+
 export const ButtonDiv = styled.div`
     display: flex;
     justify-content: space-around;
     position: relative;
-    top: 230px;
+    top: 50px;
     right: 0px;
-`;
+`
+
 export const BotonClose = styled.button`
 	background-color: red;
     border: none;
@@ -159,8 +161,10 @@ export const BotonClose = styled.button`
     height: 30px;
     width: 100px; 
     cursor: pointer;
+    margin-right: 5px;
 
-`;
+`
+
 export const BotonSave = styled.button`
     border: none;
     border-radius: 30px;
@@ -170,7 +174,23 @@ export const BotonSave = styled.button`
     width: 100px;
     cursor: pointer;
 
-`;
+`
+
 export const DivEvent = styled.div`
+    width: 250px;
+    height: 200px;
+    padding: 0px 30px;
+    box-sizing: border-box;
+    overflow-y: auto;   
     
-`;
+`
+
+export const EventDiv = styled.div`
+    overflow-y: auto;
+    height: 57px;
+    font-size: 10px;
+    color: white;
+        p{
+
+    }
+`
